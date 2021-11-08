@@ -19,6 +19,7 @@ export default function Index() {
                 break;
             case '/testModal':
                 history.push('/testModal')
+                break;
             case '/testStyle':
                 history.push('/testStyle')
             default:

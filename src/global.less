@@ -150,18 +150,19 @@
   border-radius: 4px;
 }
 
-//hover时颜色
 .mainBtnH44:hover,
-.mainBtnH44:focus,
 .mainBtnH44NoBorder:hover,
-.mainBtnH44NoBorder:focus,
-.mainBtnH60:hover,
-.mainBtnH60:focus {
+.mainBtnH60:hover {
   background: #66B1FF;
 }
 
+.mainBtnH44:focus,
+.mainBtnH44NoBorder:focus,
+.mainBtnH60:focus {
+  background: #2B85E4;
+}
 
-//次要按钮
+//次要按钮,大尺寸
 //共用样式
 .minorBtnH44,
 .minorBtnH44NoBorder,
@@ -192,15 +193,20 @@
 }
 
 .minorBtnH44:hover,
-.minorBtnH44:focus,
 .minorBtnH44NoBorder:hover,
-.minorBtnH44NoBorder:focus,
-.minorBtnH60:hover,
-.minorBtnH60:focus {
+.minorBtnH60:hover {
   background-color: #409EFF;
   border: 1px solid #409EFF;
+  color: #ffffff;
 }
 
+.minorBtnH44:focus,
+.minorBtnH44NoBorder:focus,
+.minorBtnH60:focus {
+  background-color: #2B85E4;
+  border: 1px solid #2B85E4;
+  color: #ffffff;
+}
 
 //主要按钮，小尺寸
 .mainBtnH50,
@@ -214,6 +220,25 @@
   background-color: #1890FF;
   padding: 0 16px;
 }
+
+.mainBtnH50:hover,
+.mainBtnH50NoBor:hover,
+.mainBtnH40:hover,
+.mainBtnH40NoBor:hover,
+.mainBtnH30:hover,
+.mainBtnH30NoBor:hover {
+  background: #66B1FF;
+}
+
+.mainBtnH50:focus,
+.mainBtnH50NoBor:focus,
+.mainBtnH40:focus,
+.mainBtnH40NoBor:focus,
+.mainBtnH30:focus,
+.mainBtnH30NoBor:focus {
+  background: #2B85E4;
+}
+
 
 //有圆角
 .mainBtnH50 {
@@ -310,24 +335,28 @@
   height: 30px;
 }
 
-//次要按钮hover时共用样式
+//次要按钮,小尺寸hover时共用样式
 .minorBtnH50:hover,
-.minorBtnH50:focus,
 .minorBtnH50NoBor:hover,
-.minorBtnH50NoBor:focus,
 .minorBtnH40:hover,
-.minorBtnH40:focus,
 .minorBtnH40NoBor:hover,
-.minorBtnH40NoBor:focus,
 .minorBtnH30:hover,
-.minorBtnH30:focus,
-.minorBtnH30NoBor:hover,
-.minorBtnH30NoBor:focus {
+.minorBtnH30NoBor:hover {
   background: #409EFF;
   border: 1px solid #409EFF;
   color: #ffffff;
 }
 
+.minorBtnH50:focus,
+.minorBtnH50NoBor:focus,
+.minorBtnH40:focus,
+.minorBtnH40NoBor:focus,
+.minorBtnH30:focus,
+.minorBtnH30NoBor:focus {
+  background: #2B85E4;
+  border: 1px solid #2B85E4;
+  color: #ffffff;
+}
 
 //组合按钮
 .mainAction,
@@ -346,11 +375,31 @@
   margin-right: 20px;
 }
 
+.mainAction:hover {
+  background: #66B1FF;
+  color: #ffffff;
+}
+
+.mainAction:focus {
+  background: #2B85E4;
+  color: #ffffff;
+}
+
 //辅助操作按钮
 .assistAction {
   color: #1890FF;
   background-color: #ffffff;
   border: 1px solid #1890FF;
+}
+
+.assistAction:hover {
+  background: #409EFF;
+  color: #ffffff;
+}
+
+.assistAction:focus {
+  background: #2B85E4;
+  color: #ffffff;
 }
 
 //取消按钮
@@ -360,9 +409,14 @@
   border: 1px solid #E4E4E4;
 }
 
-.cancelBtn:hover,
-.cancelBtn:focus {
+.cancelBtn:hover {
   background: #F0F7FF;
   border: 1px solid #7ABBFF;
+  color: #409EFF;
+}
+
+.cancelBtn:focus {
+  background: #F0F7FF;
+  border: 1px solid #409EFF;
   color: #409EFF;
 }
