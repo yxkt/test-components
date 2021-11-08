@@ -45,6 +45,13 @@ export default defineConfig({
           title: '模态框复用',
         },
         {
+          path: '/testStyle',
+          component: '@/pages/testStyle',
+          exact: true,
+          title: '测试样式',
+        },
+
+        {
           path: '/403',
           component: './403',
         },

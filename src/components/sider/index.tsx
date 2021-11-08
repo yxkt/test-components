@@ -19,6 +19,8 @@ export default function Index() {
                 break;
             case '/testModal':
                 history.push('/testModal')
+            case '/testStyle':
+                history.push('/testStyle')
             default:
                 break;
         }
@@ -38,6 +40,7 @@ export default function Index() {
                     <Menu.Item key="/xiazai">文件下载功能</Menu.Item>
                     <Menu.Item key="/upload">文件上传功能</Menu.Item>
                     <Menu.Item key="/testModal">模态框复用</Menu.Item>
+                    <Menu.Item key="/testStyle">测试样式</Menu.Item>
                 </SubMenu>
             </Menu>
         </Sider>

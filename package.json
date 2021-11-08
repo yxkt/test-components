@@ -30,8 +30,8 @@
     "react-monaco-editor": "^0.45.0",
     "react-redux": "^7.2.6",
     "redux": "^4.1.1",
-    "umi": "^3.4.21",
-    "yangxu-button": "^1.0.2"
+    "yx-component": "^1.1.2",
+    "umi": "^3.4.21"
   },
   "devDependencies": {
     "@types/react": "^17.0.0",
