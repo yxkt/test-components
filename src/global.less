@@ -122,8 +122,9 @@
 }
 
 
-//按钮区域
+//以下为按钮区域
 //主要按钮,有圆角,大尺寸
+//type用primary
 .mainBtnH44,
 .mainBtnH44NoBorder,
 .mainBtnH60 {
@@ -156,17 +157,20 @@
   background: #66B1FF;
 }
 
-.mainBtnH44:focus,
-.mainBtnH44NoBorder:focus,
-.mainBtnH60:focus {
+.mainBtnH44:active,
+.mainBtnH44NoBorder:active,
+.mainBtnH60:active {
   background: #2B85E4;
 }
 
-//次要按钮,大尺寸
+//次要按钮,大尺寸,type用default
 //共用样式
 .minorBtnH44,
+.minorBtnH44:focus,
 .minorBtnH44NoBorder,
-.minorBtnH60 {
+.minorBtnH44NoBorder:focus,
+.minorBtnH60,
+.minorBtnH60:focus {
   font-size: 16px;
   color: #409EFF;
   background: #F0F7FF;
@@ -200,15 +204,15 @@
   color: #ffffff;
 }
 
-.minorBtnH44:focus,
-.minorBtnH44NoBorder:focus,
-.minorBtnH60:focus {
+.minorBtnH44:active,
+.minorBtnH44NoBorder:active,
+.minorBtnH60:active {
   background-color: #2B85E4;
   border: 1px solid #2B85E4;
   color: #ffffff;
 }
 
-//主要按钮，小尺寸
+//主要按钮，小尺寸,type用primary
 .mainBtnH50,
 .mainBtnH50NoBor,
 .mainBtnH40,
@@ -228,14 +232,15 @@
 .mainBtnH30:hover,
 .mainBtnH30NoBor:hover {
   background: #66B1FF;
+  color: #ffffff;
 }
 
-.mainBtnH50:focus,
-.mainBtnH50NoBor:focus,
-.mainBtnH40:focus,
-.mainBtnH40NoBor:focus,
-.mainBtnH30:focus,
-.mainBtnH30NoBor:focus {
+.mainBtnH50:active,
+.mainBtnH50NoBor:active,
+.mainBtnH40:active,
+.mainBtnH40NoBor:active,
+.mainBtnH30:active,
+.mainBtnH30NoBor:active {
   background: #2B85E4;
 }
 
@@ -279,13 +284,21 @@
 }
 
 
-//次要按钮,小尺寸
+//次要按钮,小尺寸,type用default
 .minorBtnH50NoBor,
+.minorBtnH50NoBor:focus,
 .minorBtnH50,
+.minorBtnH50:focus,
+
 .minorBtnH40NoBor,
+.minorBtnH40NoBor:focus,
 .minorBtnH40,
+.minorBtnH40:focus,
+
 .minorBtnH30NoBor,
-.minorBtnH30 {
+.minorBtnH30NoBor:focus,
+.minorBtnH30,
+.minorBtnH30:focus {
   color: #409EFF;
   font-size: 16px;
   background: #F0F7FF;
@@ -347,12 +360,12 @@
   color: #ffffff;
 }
 
-.minorBtnH50:focus,
-.minorBtnH50NoBor:focus,
-.minorBtnH40:focus,
-.minorBtnH40NoBor:focus,
-.minorBtnH30:focus,
-.minorBtnH30NoBor:focus {
+.minorBtnH50:active,
+.minorBtnH50NoBor:active,
+.minorBtnH40:active,
+.minorBtnH40NoBor:active,
+.minorBtnH30:active,
+.minorBtnH30NoBor:active {
   background: #2B85E4;
   border: 1px solid #2B85E4;
   color: #ffffff;
@@ -368,26 +381,21 @@
   padding: 0 16px;
 }
 
-//主要操作和确定按钮共用
+//主要操作和确定按钮共用,type用primary
 .mainAction {
-  color: #ffffff;
-  background: #1890FF;
   margin-right: 20px;
+  height: 30px;
 }
 
-.mainAction:hover {
-  background: #66B1FF;
-  color: #ffffff;
-}
-
-.mainAction:focus {
+.mainAction:active {
   background: #2B85E4;
-  color: #ffffff;
 }
 
-//辅助操作按钮
+
+//辅助操作按钮,type属性用default
 .assistAction {
   color: #1890FF;
+  height: 30px;
   background-color: #ffffff;
   border: 1px solid #1890FF;
 }
@@ -397,13 +405,14 @@
   color: #ffffff;
 }
 
-.assistAction:focus {
+.assistAction:active {
   background: #2B85E4;
   color: #ffffff;
 }
 
-//取消按钮
-.cancelBtn {
+//取消按钮,type属性用default
+.cancelBtn,
+.cancelBtn:focus {
   color: #999999;
   background-color: #ffffff;
   border: 1px solid #E4E4E4;
@@ -415,8 +424,32 @@
   color: #409EFF;
 }
 
-.cancelBtn:focus {
+.cancelBtn:active {
   background: #F0F7FF;
   border: 1px solid #409EFF;
   color: #409EFF;
+}
+
+//以下为input框区域
+//input和文本域共用同一样式
+//input高度为32px,使用默认input框即可。
+
+.input:focus,
+.input:hover {
+  border: 1px solid #1890FF !important;
+  box-shadow: 0px 0px 5px rgba(24, 144, 255, 0.25);
+}
+
+//该样式控制input框获取焦点时，前面图标的颜色。
+.ant-input-affix-wrapper-focused>.ant-input-prefix {
+  color: #1890FF;
+}
+
+.ant-input {
+  color: #333333;
+
+  &::placeholder {
+    color: #CCCCCC;
+
+  }
 }

@@ -4,7 +4,12 @@ export default defineConfig({
   nodeModulesTransform: {
     type: 'none',
   },
-
+  theme: {
+    "select-item-selected-font-weight": "none",
+    "select-item-selected-color": "#1890FF",
+    "select-item-selected-bg": "#FFFFFF",
+    "select-item-active-bg": "#F9F9F9",
+  },
   routes: [
     {
       path: '/login',

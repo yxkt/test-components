@@ -27,7 +27,7 @@ export default function Index(props: any) {
             style={{
               padding: 24,
               margin: 0,
-              height: '75vh',
+              height: '100vh',
             }}
           >
             <ConfigProvider locale={zhCN}>
