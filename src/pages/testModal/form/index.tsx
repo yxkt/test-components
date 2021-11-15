@@ -1,12 +1,13 @@
 import React from 'react'
 import { Form, Input, message } from 'antd';
+import { addData, updateData } from '@/utils/api'
 interface Iprops {
     form: any,
     setIsModalVisible: (prams: boolean) => void,
     modalNum: number
 }
 export default function Index({ form, modalNum, setIsModalVisible }: Iprops) {
-    const onFinish = (values: Record<string, string>) => {
+    const onFinish = async (values: Record<string, string>) => {
         if (modalNum) {
             if (values.username === '重庆第一帅' && values.password === '123456') {
                 setIsModalVisible(false)
@@ -15,8 +16,9 @@ export default function Index({ form, modalNum, setIsModalVisible }: Iprops) {
             }
             message.error('账号或密码错误')
         } else {
-            message.success('新增成功')
+            await addData(values)
             setIsModalVisible(false)
+            message.success('新增成功')
         }
     };
     return (
@@ -30,18 +32,25 @@ export default function Index({ form, modalNum, setIsModalVisible }: Iprops) {
         >
             <Form.Item
                 label="姓名"
-                name="username"
+                name="name"
                 rules={[{ required: true, message: 'Please input your username!' }]}
             >
                 <Input />
             </Form.Item>
 
             <Form.Item
-                label="密码"
-                name="password"
-                rules={[{ required: true, message: 'Please input your password!' }]}
+                label="年龄"
+                name="age"
+                rules={[{ required: true, message: 'Please input your age!' }]}
             >
-                <Input.Password />
+                <Input />
+            </Form.Item>
+            <Form.Item
+                label="地址"
+                name="address"
+                rules={[{ required: true, message: 'Please input your address!' }]}
+            >
+                <Input />
             </Form.Item>
         </Form>
     )

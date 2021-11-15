@@ -26,6 +26,7 @@
     "@jiaminghi/data-view-react": "^1.2.5",
     "@umijs/preset-react": "1.x",
     "codemirror": "^5.63.3",
+    "echarts": "^5.2.2",
     "react-codemirror2": "^7.2.1",
     "react-json-view": "^1.21.3",
     "react-monaco-editor": "^0.45.0",

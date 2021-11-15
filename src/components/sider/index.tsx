@@ -22,6 +22,10 @@ export default function Index() {
                 break;
             case '/testStyle':
                 history.push('/testStyle')
+                break;
+            case '/mock':
+                history.push('/mock')
+                break;
             default:
                 break;
         }
@@ -42,6 +46,7 @@ export default function Index() {
                     <Menu.Item key="/upload">文件上传功能</Menu.Item>
                     <Menu.Item key="/testModal">模态框复用</Menu.Item>
                     <Menu.Item key="/testStyle">测试样式</Menu.Item>
+                    <Menu.Item key="/mock">leancloud在线数据</Menu.Item>
                 </SubMenu>
             </Menu>
         </Sider>

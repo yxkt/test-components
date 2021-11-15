@@ -1,6 +1,6 @@
-
+import React from 'react'
 import ReactJson from 'react-json-view'
-// import Button from 'yx-component'
+
 
 export default function IndexPage() {
 

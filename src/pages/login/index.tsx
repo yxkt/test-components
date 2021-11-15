@@ -1,18 +1,20 @@
 import * as React from 'react';
 import { history, useModel } from 'umi';
 import { Form, Input, Button, message } from 'antd';
+import { login } from '@/utils/api'
 import './index.less';
 export default () => {
   const { setUser } = useModel('useAuthModel');
-  const onFinish = (value: any) => {
-    // console.log(value);
-    if (value.name === 'admin' && value.password === '123456') {
-      setUser(value.name)
-      sessionStorage.setItem('token', value.name)
+  const onFinish = async (value: any) => {
+    let res = await login(value)
+    if (res.sessionToken) {
+      setUser(res.username)
+      localStorage.setItem('token', res.sessionToken)
       history.push('/')
     } else {
-      message.error('账号或密码错误')
+      message.error('账号或者密码错误')
     }
+
   }
   const layout = {
     labelCol: {
@@ -45,7 +47,7 @@ export default () => {
         <Form.Item
           style={{ width: '100%' }}
           label="账号"
-          name="name"
+          name="username"
           rules={[
             {
               required: true,

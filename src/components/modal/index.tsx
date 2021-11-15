@@ -4,7 +4,7 @@ interface Iprops {
     isModalVisible: boolean;
     setIsModalVisible: (prams: boolean) => void;
     children: ReactNode;
-    modalNum: number,
+    modalNum: boolean,
     form?: Record<string, any>;
 }
 

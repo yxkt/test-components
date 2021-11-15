@@ -1,10 +1,9 @@
 import { extend } from 'umi-request';
 import { notification, message } from 'antd';
 import { history } from 'umi';
-import util from '@/utils/util';
+// import util from '@/utils/util';
 
-const baseUrl: string | undefined =
-  process.env.NODE_ENV === 'production' ? '' : '/apiManage1';
+const baseUrl: string | undefined = process.env.NODE_ENV === 'production' ? '' : '/api'; //api为代理地址
 const token = sessionStorage.getItem('token') || 'token存在'
 interface codeMessage {
   [key: number]: string;
@@ -45,8 +44,11 @@ const request = extend({
   prefix: baseUrl,
   // timeout: 6000,
   headers: {
-    Authorization: token,
-    'x-requested-with': 'XMLHttpRequest',
+    // Authorization: token,
+    // 'x-requested-with': 'XMLHttpRequest',
+    "Content-Type": "application/json",
+    "X-LC-Id": "WIHe8kqcEJ8WgJGpBgs7d93f-gzGzoHsz",
+    "X-LC-Key": "1dsNGnmVI2gTqXe7NyW4X0KA"
   },
   credentials: 'include', // 默认请求是否带上cookie
 });
@@ -81,7 +83,7 @@ request.use(async (ctx, next) => {
   const { res } = ctx;
   if (!skipBizError) {
     if (res?.code && res?.code === 100302) {
-      return util.loginRedirectUri();
+      // return util.loginRedirectUri();
     } else if (res?.code && res?.code !== 100200 && res?.code !== 130039) {
       message.error(res?.msg);
       return res;

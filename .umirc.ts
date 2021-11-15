@@ -4,11 +4,19 @@ export default defineConfig({
   nodeModulesTransform: {
     type: 'none',
   },
+  proxy: {
+    '/api': {
+      'target': 'https://wihe8kqc.lc-cn-n1-shared.com', //leanCloud BaseUrl
+      'changeOrigin': true,
+      'pathRewrite': { '^/api': '' },
+    },
+  },
+  mock: false,
   theme: {
-    "select-item-selected-font-weight": "none",
-    "select-item-selected-color": "#1890FF",
-    "select-item-selected-bg": "#FFFFFF",
-    "select-item-active-bg": "#F9F9F9",
+    // "@select-item-selected-font-weight": "none",
+    // "@select-item-selected-color": "#1890FF",
+    // "@select-item-selected-bg": "#FFFFFF",
+    // "@select-item-active-bg": "#F9F9F9",
   },
   routes: [
     {
@@ -16,7 +24,6 @@ export default defineConfig({
       component: './login',
       name: '登录',
     },
-
 
     {
       path: '/',
@@ -55,6 +62,12 @@ export default defineConfig({
           exact: true,
           title: '测试样式',
         },
+        {
+          path: '/mock',
+          component: '@/pages/mockTable',
+          exact: true,
+          title: '模拟数据',
+        },
 
         {
           path: '/403',
@@ -65,8 +78,6 @@ export default defineConfig({
         },
       ]
     },
-
-
   ],
   fastRefresh: {},
 });
