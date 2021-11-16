@@ -112,7 +112,7 @@ export default function Index() {
                         <Form.Item
                             label="年龄"
                             name="age"
-                            rules={[{ required: true, message: 'Please input your age!' }]}
+                            rules={[{ required: true, message: 'Please input your age!', }]}
                         >
                             <Input />
                         </Form.Item>
