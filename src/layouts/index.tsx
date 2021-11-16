@@ -10,7 +10,7 @@ import './index.less'
 const { Content } = Layout;
 
 export default function Index(props: any) {
-  const token = localStorage.getItem('token');
+  const token = sessionStorage.getItem('token');
   React.useEffect(() => {
     if (!token) {
       history.push('/login')

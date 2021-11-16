@@ -5,8 +5,8 @@ const { Header } = Layout;
 export default function Index() {
     const handleTq = ({ key }: any) => {
         if (key === '2') {
-            history.push('/login')
             sessionStorage.removeItem('token')
+            history.push('/login')
         }
     }
     return (
